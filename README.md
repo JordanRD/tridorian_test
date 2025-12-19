@@ -1,38 +1,45 @@
 # Tridorian Take-Home Assignment
 
-## Setup Instructions
+## Demo Link
+You can view a live demo of the Tridorian agent at the following link: [Tridorian Demo](http://example.com/demo)
 
+## Setup Instructions
 1. **Clone this repository**
 
-2. **Create a virtual environment using uv:**
-   ```
-   uv venv
-   ```
+2. **Install `uv` globally:**
+  ```bash
+  pip install uv
+  ```
 
-3. **Activate the virtual environment:**
-   - On Windows:
-     ```
-     .venv\Scripts\activate
-     ```
-   - On macOS/Linux:
-     ```
-     source .venv/bin/activate
-     ```
+3. **Create a virtual environment using uv:**
+  ```
+  uv venv
+  ```
 
-4. **Install dependencies:**
-   ```
-   uv pip install -e .
-   ```
+4. **Activate the virtual environment:**
+  - On Windows:
+    ```
+    .venv\Scripts\activate
+    ```
+  - On macOS/Linux:
+    ```
+    source .venv/bin/activate
+    ```
 
-5. **Configure API keys:**
-   - Copy the `env_example` file to `.env`:
-     ```
-     cp env_example .env
-     ```
-   - Edit `.env` and set the following keys:
-     - `GOOGLE_API_KEY`: Your Google Gemini API key.
-     - `FMP_API_KEY`: Your Financial Modeling Prep API key.
-   - Ensure `GOOGLE_GENAI_USE_VERTEXAI=0` is set.
+5. **Install dependencies:**
+  ```
+  uv pip install -e .
+  ```
+
+6. **Configure API keys:**
+  - Copy the `env_example` file to `.env`:
+    ```
+    cp env_example .env
+    ```
+  - Edit `.env` and set the following keys:
+    - `GOOGLE_API_KEY`: Your [Google Gemini API key.](https://aistudio.google.com/app/api-keys)
+    - `FMP_API_KEY`: Your [Financial Modeling Prep API key.](https://site.financialmodelingprep.com/developer/docs/dashboard?tab=apiDetails)
+  - Ensure `GOOGLE_GENAI_USE_VERTEXAI=0` is set.
 
 ## How to Run
 
