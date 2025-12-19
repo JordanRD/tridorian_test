@@ -133,11 +133,25 @@ The multi-agent design provides modularity and scalability. Each sub-agent is re
 
 ### Compound Tool Structure
 
-The "Compound Tool" is implemented in `fmp_tools.py` inspired from the `analyze_stock_competitors` function, which uses asyncio for parallel execution.
+- **analyze_stock_competitors**
+The `analyze_stock_competitors` function demonstrates a parallel-then-sequential pattern:
 
-- **Parallel Phase:** Uses `asyncio.gather` to fetch API calls that can be run concurrently.
+  1. **Parallel Phase**: Uses `asyncio.gather()` to fetch real-time stock price and peer data concurrently:
+    ```python
+    real_time_stock_price_data, competitors_data = await asyncio.gather(
+      get_real_time_stock_price(symbol), get_stock_peers(symbol)
+    )
+    ```
 
-This pattern ensures efficiency by running independent API calls in parallel, then dependent ones sequentially.
+  2. **Sequential Phase**: Filters to top 3 peers, then launches parallel profile fetches:
+    ```python
+    peers = competitors_data[:3]
+    profile_tasks = [(get_company_profile(peer["symbol"])) for peer in peers]
+    competitor_profiles = await asyncio.gather(*profile_tasks)
+    ```
+
+- **with_compound_tools**
+The `with_compound_tools` wrapper abstracts individual async functions into a single compound tool. It aggregates multiple tools into one callable that the LLM can invoke, reducing tool proliferation and improving context window efficiency. The wrapper maintains the async/await pattern, allowing the agent to orchestrate parallel execution of independent API calls while preserving sequential dependencies when needed.
 
 ## AI Tool Usage Log
 
