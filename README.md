@@ -115,7 +115,6 @@ Alphabet Inc. (GOOGL) is traded on NASDAQ, which is a US exchange. Currently, th
 - Nasdaq GIDS (NIM): Open from 09:30 AM -05:00 to 04:00 PM -05:00 (America/New_York timezone)
 - OTC Markets US Pink Slips (PNK): Open from 09:30 AM -05:00 to 04:00 PM -05:00 (America/New_York timezone)
 
- 
 
 ## Design Choices
 
@@ -169,3 +168,11 @@ The `with_compound_tools` wrapper abstracts individual async functions into a si
 ### Error Handling
 - Tools return error dictionaries on exceptions, which the agent can report.
 - For failing tools, the agent would inform the user and suggest alternatives, like manual searches.
+
+## Assets
+
+### Scenario 1
+![Scenario 1 - Company Information](./assets/scenario_1.png)
+
+### Scenarios 2 & 3
+![Scenarios 2 & 3 - Company Search and Market Status](./assets/screnatio_2_3.png)
