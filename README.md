@@ -1,7 +1,7 @@
 # Tridorian Take-Home Assignment
 
 ## Demo Link
-You can view a live demo of the Tridorian agent at the following link: [Tridorian Demo](http://example.com/demo)
+You can view a live demo of the Tridorian agent at the following link: [http://103.126.117.196:8000](http://103.126.117.196:8000)
 
 ## Setup Instructions
 1. **Clone this repository**

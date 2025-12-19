@@ -12,5 +12,5 @@ services:
       - .env
     volumes:
       - .:/app
-    command: adk web --port 8000
+    command: uv run adk web --port 8000 --host 0.0.0.0
     restart: unless-stopped

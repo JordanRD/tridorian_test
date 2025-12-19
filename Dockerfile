@@ -21,4 +21,4 @@ ENV PYTHONUNBUFFERED=1
 ENV PATH="/app/.venv/bin:$PATH"
 
 # Default command to start the web interface
-CMD ["adk", "web", "--port", "8000"]
+CMD ["uv","run","adk", "web"]
