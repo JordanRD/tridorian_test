@@ -154,9 +154,15 @@ The `with_compound_tools` wrapper abstracts individual async functions into a si
 
 ## AI Tool Usage Log
 
-- **Tool Used:** GitHub Copilot, ChatGPT.
-- **Contribution:** Mostly used to assist in writing this documentation and prompt enhancement and code refactoring.
-- **Why:** To improve clarity, Developer can focuses on the important part, and make sure everything is understandable.
+- **Tools Used:** GitHub Copilot, ChatGPT
+- **Contributions:**
+  - **Documentation Writing:** Assisted in structuring and clarifying documentation since clear technical writing requires careful organization that I wanted to improve upon.
+  - **Prompt Engineering:** Helped refine system prompts to be more understandable and effective for the AI agent's decision-making.
+  - **Code Refactoring:** Used AI to identify and implement improvements like adding try-except blocks across all tools to ensure consistent error handling, reducing boilerplate code. Creating all TypeDicts from API responses examples.
+  - **Reducing Repetitive Tasks:** Automated routine code patterns to minimize manual work and focus effort on critical logic and agent behavior.
+- **Why:** To improve code quality and documentation clarity while freeing up time to concentrate on the agent's core functionality and design decisions.
+
+**ChatGPT Chat History**: [Link to Chat History](https://chatgpt.com/share/69459da7-0e1c-8004-9d24-105dbebbcf1b)
 
 ## Assumptions & Trade-offs
 
